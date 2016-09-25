@@ -1,0 +1,78 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="modules" class="wrap su-bg text-center container" style="display: none;">
+    <div id="save" class="ne-bg pad" style="display: none;">Module saved successfully</div>
+    <h1>Modules</h1>
+    <a href="javascript:app.newModule()" class="btn2x pu-bg">New Module</a>
+    <br><br>
+    <div class="modules pad cl-bg">
+        No Modules yet! <a href="javascript:app.newModule()" class="btn or-bg">Create</a>
+        <!-- Modules populated here -->
+    </div>
+</div>
+
+<div id="module" class="wrap su-bg text-center container" style="display: none;">
+    <h1>New Module</h1>
+    <input class="m12" type="text" id="name" placeholder="Title">
+    <div class="struct">
+        <div class="m6 tax pad cl-bg">
+            <h2>Taxonomies</h2>
+            <p>Data that can be used to open modules object for same type, for example, for People module, <b>Income Group</b>, <b>Internet Access</b>, <b>City</b> etc. may need to be set as Taxonomy, so that users can get People from a particular <b>City</b> or <b>Income group</b>.</p>
+            <div class="list">
+                <!-- Modules Taxonomies populated here -->
+            </div>
+            <a href="javascript:app.modTaxo()" class="icon-plus icon-fw icon-2x circle pu-bg"></a>
+        </div>
+        <div class="m6 meta pad cl-bg">
+            <h2>Meta data</h2>
+            <p>This is data that is stored in database but is not sortable by, but can be searched for. For example <b>Contact Number</b>, <b>Email</b> etc. would be stored in db but one won't need stuff like, getting all <b>People</b> with <b>Contact number</b> 9898989898, Coz there is likely to be only one (or from the same family), they may instead want to search for that person.</p>
+            <div class="list">
+                <!-- Modules Meta data populated here -->
+            </div>
+            <a href="javascript:app.modMeta()" class="icon-plus icon-fw icon-2x circle pu-bg"></a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="display">
+        <div class="m12 multi pad cl-bg">
+            <h2>Search/Archive pages</h2>
+            <p>This info will be shown on pages with multiple entries, like search pages and Taxonomy term pages ( Like on page containing all the People living in <b>Kerala</b> ).</p>
+            <p>Left box contain available data fields, drag and sort them in the yellow box on the right.</p>
+            <div class="m6 multi-list list or-bg pad">
+                <!-- Modules data to show on archives populated here -->
+            </div>
+            <div class="m6 multi-chosen chosen su-bg pad">
+                <!-- Modules data to show on archives dragged in here -->
+            </div>
+        </div>
+        <div class="m12 single pad cl-bg">
+            <h2>Display on details page</h2>
+            <p>This info will be shown on page with single entry, for example the page for Alex Johnson.</p>
+            <p>Left box contain available data fields, drag and sort them in the yellow box on the right.</p>
+            <div class="m6 single-list list or-bg pad">
+                <!-- Modules data to show on details page populated here -->
+            </div>
+            <div class="m6 single-chosen chosen su-bg pad">
+                <!-- Modules data to show on details page dragged in here -->
+            </div>
+        </div>
+    </div>
+    <div class="add-field absolute-center tu-bg pad" style="display: none;">
+        <h2></h2>
+        <input type="text" id="field-name" class="center" placeholder="Name">
+        <input type="text" id="field-value" class="center" placeholder="Example Value">
+        <a href="javascript:app.insertField()" style="font-size:1.2em" class="rounded5x btn em-bg center">Insert</a>
+    </div>
+    <a href="javascript:app.modules()" class="btn2x se-bg left l3 m4 s6">Discard Module</a>
+    <a href="javascript:app.save()" class="btn2x be-bg right l3 m4 s6">Save Module</a>
+</div>
+
+<script src="js/ext/jquery-3.1.1.min.js"></script>
+<script src="js/ext/jquery-ui.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>
